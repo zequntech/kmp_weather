@@ -13,7 +13,7 @@ object SDKManager {
     private var debuggable: Boolean = true
 
     val injector: Injector by lazy {
-        Injector(PlatformFactory(), KVStoreFactory(), env, debuggable)
+        Injector(PlatformFactory(), KVStoreFactory(), HttpFactory(), env, debuggable)
     }
 
     fun init(env: String = "dev", debuggable: Boolean = true) {

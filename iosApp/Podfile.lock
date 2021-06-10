@@ -1,16 +1,27 @@
 PODS:
-  - shared (1.0)
+  - MMKV (1.2.7):
+    - MMKVCore (~> 1.2.7)
+  - MMKVCore (1.2.7)
+  - shared (1.0):
+    - MMKV (= 1.2.7)
 
 DEPENDENCIES:
   - shared (from `../shared`)
+
+SPEC REPOS:
+  trunk:
+    - MMKV
+    - MMKVCore
 
 EXTERNAL SOURCES:
   shared:
     :path: "../shared"
 
 SPEC CHECKSUMS:
-  shared: 5c6b76aad218d2193e7b6d812ae082db8c8c56b8
+  MMKV: 22e5136f7d00197bc0fc9694b7f71519f0d1ca12
+  MMKVCore: 607b7b05f2c2140056b5d338e45f2c14bf3f4232
+  shared: ae4ee739717ad8ae3eaf522fb1890b648dd792a3
 
-PODFILE CHECKSUM: f282da88f39e69507b0a255187c8a6b644477756
+PODFILE CHECKSUM: 18b73f462c929bb6bfeebc800f0fded2dd7073d0
 
 COCOAPODS: 1.10.1
