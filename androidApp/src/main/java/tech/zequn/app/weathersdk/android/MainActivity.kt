@@ -19,7 +19,12 @@ class MainActivity : AppCompatActivity() {
             mainScope.launch(Dispatchers.IO) {
                 val weather = SDKManager.injector.apiService.fetchWeather()
                 launch(Dispatchers.Main) {
-                    findViewById<TextView>(R.id.tv_weather).setText(weather.toString())
+                    findViewById<TextView>(R.id.tv_weather).text = String.format(
+                        "城市：%s\n温度：%s\n天气：%s\n",
+                        weather.weatherinfo.city,
+                        "${weather.weatherinfo.temp1}~${weather.weatherinfo.temp2}",
+                        weather.weatherinfo.weather,
+                    )
                 }
             }
         }

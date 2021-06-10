@@ -3,10 +3,6 @@ package tech.zequn.app.weathersdk
 
 import cocoapods.MMKV.MMKV
 
-/**
- * Created by zequn on 4/2/21.
- * Email: zequntech@gmail.com
- */
 actual class KVStoreFactory {
     private val mmkv: MMKV by lazy { MMKV.defaultMMKV()!! }
 
